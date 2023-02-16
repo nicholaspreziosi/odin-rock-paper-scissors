@@ -23,9 +23,11 @@ function playRound(playerSelection, computerSelection) {
         return('Tie!');
     }
     else if (((playerSelection === 'rock') && (computerSelection === 'paper')) || ((playerSelection === 'paper') && (computerSelection === 'scissor')) || ((playerSelection === 'scissor') && (computerSelection === 'rock'))) {
+        playerScore -= 1;
         return(`You lose! ${computerSelection} beats ${playerSelection}`);
     }
     else {
+        playerScore += 1;
         return(`You win! ${playerSelection} beats ${computerSelection}`);
     }
 }
@@ -36,7 +38,16 @@ function game() {
         const computerSelection = getComputerChoice();
         console.log(playRound(playerSelection, computerSelection));
     }
+    if (playerScore === 0) {
+        console.log('Overall: Tie!');
+    }
+    else if (playerScore < 0) {
+        console.log('Overall: You lose!');
+    }
+    else {
+        console.log('Overall: You win!');
+    }
 }
 
+let playerScore = 0;
 game();
-
