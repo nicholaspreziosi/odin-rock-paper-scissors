@@ -47,11 +47,17 @@ function game() {
 
 function winner() {
     const results = document.querySelector('#results');
+    const score = document.querySelector('#score')
     if (playerScore === 5) {
         results.textContent = ('Congrats! You Win!');
+        playerScore = 0;
+        computerScore = 0;
+
     }
     else if (computerScore === 5) {
         results.textContent = ('Game Over! Computer Wins!');
+        playerScore = 0;
+        computerScore = 0;
     }
 }
 
