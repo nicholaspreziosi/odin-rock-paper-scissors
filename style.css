@@ -1,0 +1,30 @@
+body {
+    font-family: "Tahoma", sans-serif;
+}
+
+.btn {
+    font-size: 24pt;
+    color: white;
+    padding: 12px;
+    margin: 24px;
+    background-color: grey;
+    border: solid 1px black;
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.title {
+    font-size: 36pt;
+}
+
+.results-container {
+    font-size: 24pt;
+    text-align: center;
+}
